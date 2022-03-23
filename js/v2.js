@@ -97,6 +97,9 @@ var burn = new Burn();
 
 btnConnect.addEventListener('click', async () => {
   burn.connect(230400);
+  btnJS.style['display'] = '';
+  btnErase.style['display'] = '';
+  btnPython.style['display'] = '';
 });
 
 btnErase.addEventListener('click', async () => {
@@ -109,6 +112,17 @@ btnPython.addEventListener('click', async () => {
     ['fw/bitv2/0x1000_bootloader.bin', 0x1000],
     ['fw/bitv2/0x8000_partition-table.bin', 0x8000],
     ['fw/bitv2/0x10000_micropython.bin', 0x10000],
+  ];
+  console.log("OK!");
+  burn.flash(fileArr);
+});
+
+btnJS.addEventListener('click', async () => {
+  console.log("load files...");
+  var fileArr = [
+    ['fw/bitv2/0x1000_bootloader.bin', 0x1000],
+    ['fw/bitv2/0x8000_partition-table.bin', 0x8000],
+    ['fw/bitv2/bit_s2_default.bin', 0x10000],
   ];
   console.log("OK!");
   burn.flash(fileArr);
