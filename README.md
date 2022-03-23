@@ -1,6 +1,4 @@
-# Adafruit ESPTool
+# Webduino Web:Bit v2
 
-A Web Serial tool for updating your ESP bootloader.
+A Web Serial tool for updating your Web:Bit v2
 
-A live copy of the tool is hosted here: https://adafruit.github.io/Adafruit_WebSerial_ESPTool/
-# bitv2
